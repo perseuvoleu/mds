@@ -3,14 +3,14 @@ body
 	height: 100%;
 	width: 100%;
 	margin:0;
-	background-color: 		p;
+	background-color: pink;
 	font-family: 'Josefin Sans' ,sans-serif;
 	background-position: center;
 }
 html { background-color: black; }
 #score-div{
 	position: absolute;
-	margin-top:0%;
+	margin-top:25%;
 	margin-left: 0%;
 	font-size: 25px;
 	background :red;
