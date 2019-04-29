@@ -24,6 +24,11 @@ $(function() {
     car_speed = 2,
     line_speed = 5;
 
+  var move_right = false;
+  var move_left = false;
+  var move_up = false;
+  var move_down = false;
+
   $(document).on("keydown", function(e) {
     if (game_over === false) {
       var key = e.keyCode;
