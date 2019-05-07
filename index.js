@@ -130,8 +130,8 @@ $(function() {
 
   function car_down(car) {
     var current_top = parseInt(car.css("top"));
-    if (current_top > container_height + 50) {
-      current_top = -10;
+    if (current_top > container_height ) {
+      current_top = -300;
       var car_left = Math.floor(Math.random() * (container_width - car_width));
       car.css("left", car_left);
     }
@@ -173,5 +173,5 @@ $(function() {
     }
     return true;
   }
-  repeat();
+  
 });
