@@ -67,6 +67,8 @@ $(function() {
     if (game_over === false && parseInt(car.css("left")) > 0) {
       car.css("left", parseInt(car.css("left")) - 5);
       move_left = requestAnimationFrame(left);
+      var assert = require("assert");
+      assert(!move_left, "Pula mea");
     }
   }
 
@@ -130,7 +132,7 @@ $(function() {
 
   function car_down(car) {
     var current_top = parseInt(car.css("top"));
-    if (current_top > container_height ) {
+    if (current_top > container_height) {
       current_top = -300;
       var car_left = Math.floor(Math.random() * (container_width - car_width));
       car.css("left", car_left);
@@ -161,9 +163,9 @@ $(function() {
       x2 = elem2.offset().left,
       y2 = elem2.offset().top,
       h1 = $(elem1).outerHeight(),
-      w1 = $(elem1).outerWidth(),
+      w1 = $(elem1).outerWidth() - 60,
       h2 = $(elem2).outerHeight(),
-      w2 = $(elem2).outerWidth(),
+      w2 = $(elem2).outerWidth() - 60,
       b1 = y1 + h1,
       r1 = x1 + w1,
       b2 = y2 + h2,
@@ -173,5 +175,4 @@ $(function() {
     }
     return true;
   }
-  
 });
