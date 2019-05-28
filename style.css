@@ -12,10 +12,6 @@ body{
 	float:none;
 	margin: 150px auto;
 }
-#logout{
-	letter-spacing: 3px;
-	line-height: 2px;
-}
 
 .myButton {
 	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
