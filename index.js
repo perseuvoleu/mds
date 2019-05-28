@@ -1,4 +1,8 @@
+  $.getScript("first.js", function() {
+   alert("Script loaded but not necessarily executed.");
+});
 $(function() {
+
   var anim_id;
   var container = $("#container"),
     line = $("#line"),
@@ -67,8 +71,7 @@ $(function() {
     if (game_over === false && parseInt(car.css("left")) > 0) {
       car.css("left", parseInt(car.css("left")) - 5);
       move_left = requestAnimationFrame(left);
-      var assert = require("assert");
-      assert(!move_left, "Pula mea");
+     
     }
   }
 
@@ -152,6 +155,8 @@ $(function() {
     cancelAnimationFrame(anim_id);
     restart_div.slideDown();
     restart_btn.focus();
+    an();
+
   }
   restart_div.click(function() {
     window.location.reload(true);
