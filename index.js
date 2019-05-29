@@ -36,13 +36,13 @@ $(function() {
   $(document).on("keydown", function(e) {
     if (game_over === false) {
       var key = e.keyCode;
-      if (key === 37 && move_left === false) {
+      if (key === 65 && move_left === false) {
         move_left = requestAnimationFrame(left);
-      } else if (key === 39 && move_right === false) {
+      } else if (key === 68 && move_right === false) {
         move_right = requestAnimationFrame(right);
-      } else if (key === 38 && move_up === false) {
+      } else if (key === 87 && move_up === false) {
         move_up = requestAnimationFrame(up);
-      } else if (key === 40 && move_down === false) {
+      } else if (key === 83 && move_down === false) {
         move_down = requestAnimationFrame(down);
       }
     }
@@ -51,16 +51,16 @@ $(function() {
   $(document).on("keyup", function(e) {
     if (game_over === false) {
       var key = e.keyCode;
-      if (key === 37) {
+      if (key === 65) {
         cancelAnimationFrame(move_left);
         move_left = false;
-      } else if (key === 39) {
+      } else if (key === 68) {
         cancelAnimationFrame(move_right);
         move_right = false;
-      } else if (key === 38) {
+      } else if (key === 87) {
         cancelAnimationFrame(move_up);
         move_up = false;
-      } else if (key === 40) {
+      } else if (key === 83) {
         cancelAnimationFrame(move_down);
         move_down = false;
       }
